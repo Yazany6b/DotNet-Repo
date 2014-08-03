@@ -18,6 +18,8 @@ namespace WindowsFormsApplication2
         {
             int start = url.IndexOf("/url/");
 
+            if (start == -1) return null;
+
             return url.Substring(start + 5);
         }
 

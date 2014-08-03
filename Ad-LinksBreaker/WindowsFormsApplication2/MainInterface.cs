@@ -169,15 +169,65 @@ namespace WindowsFormsApplication2
 
         private void textBox1_Click(object sender, EventArgs e)
         {
+            string old = textBox1.Text;
             string clip = Clipboard.GetText();
 
+            if (!clip.ToLower().StartsWith("http")) return;
+
             textBox1.Text = clip != null ? clip : "";
-            
+
+            if (old != textBox1.Text)
+            {
+                new Task(() =>
+                {
+                    int sleep = 40;
+                    int steps = 5;
+                    int redDiff = Color.Green.R - textBox1.BackColor.R;
+                    int greenDiff = Color.Green.G - textBox1.BackColor.G;
+                    int blueDiff = Color.Green.B - textBox1.BackColor.B;
+
+                    int redAdd = redDiff / steps;
+                    int greenAdd = greenDiff / steps;
+                    int blueAdd = blueDiff / steps;
+
+                    for (int i = 0; i < steps; i++)
+                    {
+                        this.Invoke(new MethodInvoker(() =>
+                        {
+                            textBox1.BackColor = Color.FromArgb(textBox1.BackColor.R + redAdd, textBox1.BackColor.G + greenAdd, textBox1.BackColor.B + blueAdd);
+                        }));
+
+                        Thread.Sleep(sleep);
+                    }
+
+                    for (int i = 0; i < steps; i++)
+                    {
+                        this.Invoke(new MethodInvoker(() =>
+                        {
+                            textBox1.BackColor = Color.FromArgb(textBox1.BackColor.R - redAdd, textBox1.BackColor.G - greenAdd, textBox1.BackColor.B - blueAdd);
+                        }));
+
+                        Thread.Sleep(sleep);
+                    }
+                }).Start();
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             OpenInBrowser(textBox2.Text, true);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+                Clipboard.SetText(listBox1.SelectedItem.ToString());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+                OpenInBrowser(listBox1.SelectedItem.ToString(),true);
         }
     }
 }

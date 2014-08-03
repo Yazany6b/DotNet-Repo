@@ -22,7 +22,11 @@ namespace WindowsFormsApplication2
 
             int index = html.IndexOf("<p class=\"download\">");
 
+            if (index == -1) return null;
+
             int index2 = html.IndexOf("/p>", index);
+
+            if (index2 == -1) return null;
 
             string data = html.Substring(index, index2 - index);
 
@@ -32,7 +36,10 @@ namespace WindowsFormsApplication2
             data = data.Replace("   ", "");
 
             index = data.IndexOf("href=\"");
+            if (index == -1) return null;
+
             index2 = data.IndexOf('"', index + 6);
+            if (index2 == -1) return null;
 
             data = data.Substring(index + 6, index2 - (index + 6));
 

@@ -83,6 +83,7 @@
     <Compile Include="AppSettings.Designer.cs">
       <DependentUpon>AppSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="FileBasedBreaker.cs" />
     <Compile Include="GulfUpBreaker.cs" />
     <Compile Include="ILinkBreaker.cs" />
     <Compile Include="LinkbucksBreaker.cs" />
