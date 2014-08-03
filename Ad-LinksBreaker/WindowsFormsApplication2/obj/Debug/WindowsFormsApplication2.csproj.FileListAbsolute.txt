@@ -12,3 +12,17 @@ C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\Wi
 C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AppSettings.resources
 C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\Ad-Links Breaker.exe
 C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\Ad-Links Breaker.pdb
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\bin\Debug\Ad-Links Breaker.exe.config
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\Ad-Links Breaker.exe
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\Ad-Links Breaker.pdb
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\bin\Debug\Ad-Links Breaker.exe
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\bin\Debug\Ad-Links Breaker.pdb
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\bin\Debug\CefSharp.dll
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\bin\Debug\CefSharp.WinForms.dll
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\bin\Debug\HtmlAgilityPack.dll
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\bin\Debug\HtmlAgilityPack.xml
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AppSettings.resources
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MainInterface.resources
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache

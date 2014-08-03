@@ -228,5 +228,48 @@ namespace WindowsFormsApplication2
         {
             (new AppSettings()).ShowDialog();
         }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            StreamWriter writer = new StreamWriter("settings.ini");
+
+            if (Settings.OpenWithIE)
+                writer.WriteLine("OpenWith=iexplorer");
+            else if(Settings.OpenWithChrome)
+                writer.WriteLine("OpenWith=chrome");
+
+            writer.Close();
+
+            base.OnClosed(e);
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+
+            if (File.Exists("settings.ini"))
+            {
+                StreamReader reader = new StreamReader("settings.ini");
+
+                while (!reader.EndOfStream)
+                {
+                    string line = reader.ReadLine();
+
+                    if (line.Trim() == "")
+                        continue;
+
+                    if (line.ToLower().StartsWith("openwith"))
+                    {
+                        if (line.Trim().EndsWith("chrome"))
+                            Settings.OpenWithChrome = true;
+                        else if (line.Trim().EndsWith("iexplorer"))
+                            Settings.OpenWithIE = true;
+                    }
+                }
+
+                reader.Close();
+            }
+
+            base.OnLoad(e);
+        }
     }
 }
