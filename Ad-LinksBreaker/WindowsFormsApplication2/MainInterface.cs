@@ -19,37 +19,17 @@ namespace WindowsFormsApplication2
 {
     public partial class MainInterface : Form
     {
-        CefSharp.WinForms.WebView web_view;
-        System.Windows.Forms.Timer timer;
+
+        private List<ILinkBreaker> breakers = new List<ILinkBreaker>();
 
         public MainInterface()
         {
             InitializeComponent();
-            /*web_view = new WebView("file:///C:/Users/Yazan/Documents/Visual%20Studio%202012/Projects/WindowsFormsApplication2/WindowsFormsApplication2/bin/Debug/tmp.html", new BrowserSettings());
-            web_view.Dock = DockStyle.Fill;
-            panel1.Controls.Add(web_view);
 
-            panel1.Invalidate();
-            panel1.Refresh();*/
-        }
-
-        void timer_Tick(object sender, EventArgs e)
-        {
-            try
-            {
-                string url = web_view.EvaluateScript("document.getElementById(\"skip_button\").href").ToString();
-
-                if (url != "")
-                {
-                    timer.Stop();
-                    flyResult = url;
-                    flyLoaded = true;
-                }
-            }
-            catch (Exception)
-            {
-               
-            }
+            breakers.Add(new LinkbucksBreaker());
+            breakers.Add(new ZimkBreaker());
+            breakers.Add(new AdFlyBreaker(panel1));
+            breakers.Add(new GulfUpBreaker());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,18 +48,10 @@ namespace WindowsFormsApplication2
             new Task(() =>
             {
                 string result = StartDownload(url);
-                //string result = StartDownload("file:///C:/Users/Yazan/Documents/Visual%20Studio%202012/Projects/WindowsFormsApplication2/WindowsFormsApplication2/bin/Debug/tmp.html");
 
                 this.Invoke(new MethodInvoker(() =>
                 {
-                    if (Settings.OpenWithChrome)
-                    {
-                        Process.Start("chrome", result);
-                    }
-                    else if (Settings.OpenWithIE)
-                    {
-                        Process.Start("iexplore", result);
-                    }
+                    OpenInBrowser(result);
                     textBox2.Text = result;
                     label1.Text = "Done :)";
                     progressBar1.Style = ProgressBarStyle.Blocks;
@@ -96,162 +68,50 @@ namespace WindowsFormsApplication2
 
         private string ParseUrl(string url)
         {
-            if (url.StartsWith("http://www.linkbucks.com"))
+            string nextUrl = null;
+
+            for (int i = 0; i < breakers.Count; i++)
             {
-                return ParseUrl(GetLinkbucksDownloadPage(url));
+                ILinkBreaker item = breakers[i];
+                if (item.CanBreake(url))
+                {
+                    this.Invoke(new MethodInvoker(() =>
+                    {
+                        label1.Text = "Accessing " + item.GetName() + " ....";
+                        listBox1.Items.Add(url);
+                    }));
+
+                    try
+                    {
+                        nextUrl = item.BreakUrl(url);
+                    }
+                    catch
+                    {
+                        return url;
+                    }
+
+                    break;
+                }
             }
 
-            if (url.StartsWith("http://zi-m.biz/"))
+            if (nextUrl != null)
             {
-                return ParseUrl(GetZmDownloadPage(url));
+                return ParseUrl(nextUrl);
             }
-
-            if (url.StartsWith("http://adf.ly/"))
-            {
-                return ParseUrl(GetFlyDownloadPage(url));
-            }
-
-            if (url.StartsWith("file:///C:/Users"))
-            {
-                return ParseUrl(GetZmDownloadPage(url));
-            }
-
-            if (url.StartsWith("http://www.gulfup.com/"))
-            {
-                return ParseUrl(GetGulfDownloadPage(url));
-            }
-            
 
             return url;
         }
 
-
-        private string GetGulfDownloadPage(string url)
+        public void OpenInBrowser(string url,bool anyway = false)
         {
-            this.Invoke(new MethodInvoker(() =>
+            if(Settings.OpenWithChrome || anyway)
             {
-                label1.Text = "Accessing GulfUp.com ....";
-                listBox1.Items.Add(url);
-            }));
-
-            WebClient webClient = new WebClient();
-
-            string html = webClient.DownloadString(url);
-
-            int index = html.IndexOf("<p class=\"download\">");
-
-            int index2 = html.IndexOf("/p>", index);
-
-            string data = html.Substring(index, index2 - index);
-
-            data.Replace("<p class=\"download\">", "");
-
-            data = data.Replace(" ", "");
-            data = data.Replace("   ", "");
-
-            index = data.IndexOf("href=\"");
-            index2 = data.IndexOf('"', index + 6);
-
-            data = data.Substring(index + 6, index2 - (index + 6));
-
-            return data;
-
-        }
-
-        private bool flyLoaded = false;
-        private string flyResult = "";
-        private string GetFlyDownloadPage(string url)
-        {
-
-            this.Invoke(new MethodInvoker(() =>{
-                label1.Text = "Accessing Fly.fl ....";
-                listBox1.Items.Add(url);
-            }));
-
-            flyLoaded = false;
-
-            this.Invoke(new MethodInvoker(() =>
+                Process.Start("chrome", url);
+            }
+            else if (Settings.OpenWithIE)
             {
-                web_view = new WebView(url, new BrowserSettings());
-                web_view.Dock = DockStyle.Fill;
-                panel1.Controls.Add(web_view);
-
-                timer = new System.Windows.Forms.Timer();
-                
-                timer.Interval = 1000;
-                timer.Tick += timer_Tick;
-
-                timer.Start();
-            }));
-
-
-            while (!flyLoaded) { Thread.Sleep(1000); }
-
-            this.Invoke(new MethodInvoker(() =>
-            {
-                web_view.Dispose();
-                timer.Dispose();
-            }));
-
-            return flyResult;
-        }
-
-        private string GetZmDownloadPage(string url)
-        {
-            this.Invoke(new MethodInvoker(() =>
-            {
-                label1.Text = "Accessing zi-m.biz ....";
-                listBox1.Items.Add(url);
-            }));
-           
-            WebClient webClient = new WebClient();
-
-            string html = webClient.DownloadString(url);
-
-            int index = html.IndexOf("<p class=\"download\">			");
-
-            int index2 = html.IndexOf("/p>", index);
-
-            string data = html.Substring(index, index2 - index);
-
-            data.Replace("<p class=\"download\">			", "");
-
-            data = data.Replace(" ", "");
-            data = data.Replace("   ", "");
-
-            index = data.IndexOf("href=\"");
-            index2 = data.IndexOf('"',index + 6);
-
-            data = data.Substring(index + 6, index2 - (index+6));
-
-            return data;
-        }
-
-        private string GetLinkbucksDownloadPage(string url)
-        {
-            this.Invoke(new MethodInvoker(() =>
-            {
-                label1.Text = "Accessing linkbucks.com ....";
-                listBox1.Items.Add(url);
-            }));
-
-            int start = url.IndexOf("/url/");
-
-            return url.Substring(start + 5);
-        }
-
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-        }
-
-        private void webBrowser1_FileDownload(object sender, EventArgs e)
-        {
-            string u = GetZmDownloadPage("");
-        }
-
-        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
+                Process.Start("iexplore", url);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -313,6 +173,11 @@ namespace WindowsFormsApplication2
 
             textBox1.Text = clip != null ? clip : "";
             
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenInBrowser(textBox2.Text, true);
         }
     }
 }
