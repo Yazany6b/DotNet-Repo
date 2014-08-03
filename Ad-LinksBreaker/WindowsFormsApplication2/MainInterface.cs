@@ -55,6 +55,11 @@ namespace WindowsFormsApplication2
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text.Trim() == "")
+                return;
+
+            string url = textBox1.Text;
+
             listBox1.Items.Clear();
             if (progressBar1.Style == ProgressBarStyle.Marquee)
                 return;
@@ -62,7 +67,8 @@ namespace WindowsFormsApplication2
             progressBar1.Style = ProgressBarStyle.Marquee;
             new Task(() =>
             {
-                string result = StartDownload("file:///C:/Users/Yazan/Documents/Visual%20Studio%202012/Projects/WindowsFormsApplication2/WindowsFormsApplication2/bin/Debug/tmp.html");
+                string result = StartDownload(url);
+                //string result = StartDownload("file:///C:/Users/Yazan/Documents/Visual%20Studio%202012/Projects/WindowsFormsApplication2/WindowsFormsApplication2/bin/Debug/tmp.html");
 
                 this.Invoke(new MethodInvoker(() =>
                 {
