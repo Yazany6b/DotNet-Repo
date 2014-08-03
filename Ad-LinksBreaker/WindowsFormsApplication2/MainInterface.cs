@@ -116,9 +116,46 @@ namespace WindowsFormsApplication2
                 return ParseUrl(GetZmDownloadPage(url));
             }
 
+            if (url.StartsWith("http://www.gulfup.com/"))
+            {
+                return ParseUrl(GetGulfDownloadPage(url));
+            }
             
 
             return url;
+        }
+
+
+        private string GetGulfDownloadPage(string url)
+        {
+            this.Invoke(new MethodInvoker(() =>
+            {
+                label1.Text = "Accessing GulfUp.com ....";
+                listBox1.Items.Add(url);
+            }));
+
+            WebClient webClient = new WebClient();
+
+            string html = webClient.DownloadString(url);
+
+            int index = html.IndexOf("<p class=\"download\">");
+
+            int index2 = html.IndexOf("/p>", index);
+
+            string data = html.Substring(index, index2 - index);
+
+            data.Replace("<p class=\"download\">", "");
+
+            data = data.Replace(" ", "");
+            data = data.Replace("   ", "");
+
+            index = data.IndexOf("href=\"");
+            index2 = data.IndexOf('"', index + 6);
+
+            data = data.Substring(index + 6, index2 - (index + 6));
+
+            return data;
+
         }
 
         private bool flyLoaded = false;
@@ -166,14 +203,10 @@ namespace WindowsFormsApplication2
                 label1.Text = "Accessing zi-m.biz ....";
                 listBox1.Items.Add(url);
             }));
-
-            HtmlAgilityPack.HtmlDocument doc = new HtmlAgilityPack.HtmlDocument();
            
             WebClient webClient = new WebClient();
 
             string html = webClient.DownloadString(url);
-            
-            doc.LoadHtml(html);
 
             int index = html.IndexOf("<p class=\"download\">			");
 
@@ -272,6 +305,14 @@ namespace WindowsFormsApplication2
             }
 
             base.OnLoad(e);
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            string clip = Clipboard.GetText();
+
+            textBox1.Text = clip != null ? clip : "";
+            
         }
     }
 }
