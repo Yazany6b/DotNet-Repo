@@ -25,7 +25,6 @@ namespace WindowsFormsApplication2
         public MainInterface()
         {
             InitializeComponent();
-
             /*web_view = new WebView("file:///C:/Users/Yazan/Documents/Visual%20Studio%202012/Projects/WindowsFormsApplication2/WindowsFormsApplication2/bin/Debug/tmp.html", new BrowserSettings());
             web_view.Dock = DockStyle.Fill;
             panel1.Controls.Add(web_view);
@@ -58,6 +57,7 @@ namespace WindowsFormsApplication2
             if (textBox1.Text.Trim() == "")
                 return;
 
+            textBox2.Text = "";
             string url = textBox1.Text;
 
             listBox1.Items.Clear();
@@ -115,6 +115,8 @@ namespace WindowsFormsApplication2
             {
                 return ParseUrl(GetZmDownloadPage(url));
             }
+
+            
 
             return url;
         }
