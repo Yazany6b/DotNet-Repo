@@ -1,0 +1,14 @@
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\HtmlAgilityPack.dll
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\HtmlAgilityPack.xml
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\CefSharp.dll
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\CefSharp.WinForms.dll
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MainInterface.resources
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\Ad-Links Breaker.exe.config
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\Ad-Links Breaker.exe
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\Ad-Links Breaker.pdb
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.AppSettings.resources
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\Ad-Links Breaker.exe
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\Ad-Links Breaker.pdb
