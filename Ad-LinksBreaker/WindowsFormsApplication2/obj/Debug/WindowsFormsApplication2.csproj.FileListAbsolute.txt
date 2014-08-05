@@ -26,3 +26,6 @@ E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\Wi
 E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.MainInterface.resources
 E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
 E:\GitHub\YazanDotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+G:\Software Engineer Toolbox\Github\DotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\bin\Debug\Ad-Links Breaker.exe.config
+G:\Software Engineer Toolbox\Github\DotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\Ad-Links Breaker.exe
+G:\Software Engineer Toolbox\Github\DotNet-Repo\Ad-LinksBreaker\WindowsFormsApplication2\obj\Debug\Ad-Links Breaker.pdb
