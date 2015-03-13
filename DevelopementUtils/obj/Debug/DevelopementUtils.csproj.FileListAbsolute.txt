@@ -1,0 +1,4 @@
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\DevelopementUtils\bin\Debug\Development.Utilities.dll
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\DevelopementUtils\bin\Debug\Development.Utilities.pdb
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\DevelopementUtils\obj\Debug\Development.Utilities.dll
+C:\Users\Yazan\Documents\Visual Studio 2012\Projects\DevelopementUtils\obj\Debug\Development.Utilities.pdb
