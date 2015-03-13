@@ -1,0 +1,63 @@
+﻿/*
+                if (e.Button == System.Windows.Forms.MouseButtons.Left)
+                {
+                    if (e.X >= sketchPanel.Width || e.Y >= sketchPanel.Height)
+                        return;
+                    if (firstPoint == System.Drawing.Point.Empty)
+                    {
+                        firstPoint = e.Location;
+                        loc = e.Location;
+                        return;
+                    }
+                    else
+                    {
+                        if (e.X >= firstPoint.X && e.Y >= firstPoint.Y)
+                            size = new System.Drawing.Size(e.X - firstPoint.X, e.Y - firstPoint.Y);
+                        else
+                        {
+                            if (e.Y < firstPoint.Y && e.X > firstPoint.X)
+                            {
+                                //System.Windows.Forms.MessageBox.Show("");
+                                size = new System.Drawing.Size(e.X - firstPoint.X, firstPoint.Y - e.Y);
+                                loc = new System.Drawing.Point(loc.X, e.Y);
+                            }
+                            else
+                            {
+                                if (e.Y > firstPoint.Y && e.X < firstPoint.X)
+                                {
+                                    //System.Windows.Forms.MessageBox.Show("");
+                                    size = new System.Drawing.Size(firstPoint.X - e.X,e.Y - firstPoint.Y);
+                                    loc = new System.Drawing.Point(e.X, loc.Y);
+                                }
+                                else
+                                {
+                                    size = new System.Drawing.Size(firstPoint.X - e.X, firstPoint.Y - e.Y);
+                                    loc = e.Location;
+                                }
+                            }
+                        }
+
+                        if (selectionPanel.ClientSize.Width > 5 && selectionPanel.ClientSize.Height > 5)
+                        {
+                            if (map == null)
+                            {
+                                map = new System.Drawing.Bitmap(sketchPanel.ClientSize.Width, sketchPanel.ClientSize.Height);
+
+                                for (int i = 0; i < map.Width; i++)
+                                    for (int ii = 0; ii < map.Width; ii++)
+                                        map.SetPixel(i, ii, sketchPanel.BackColor);
+                                sketcher.DrawToBitmap(map);
+
+                                selector.Sketch(sketcher, new System.Drawing.Point(100, 100), new System.Drawing.Size(100, 100));
+
+                                Form1 d = new Form1(map);
+                                d.ShowDialog();
+
+                                selector.UnSketch(sketcher.Graphics,map);
+                            }
+                            selector.UnSketch(sketcher.Graphics, map);
+                            selector.Sketch(sketcher, loc, size);
+                            //   selectionPanel.BackgroundImage = CreateImage(selectionPanel.Location,selectionPanel.ClientSize);
+                        }
+                    }
+                }

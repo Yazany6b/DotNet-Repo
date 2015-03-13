@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Icons Extracter", "Icons Extracter\Icons Extracter.vcproj", "{CCB1FB0F-C18C-421D-BCF9-840C274471E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCB1FB0F-C18C-421D-BCF9-840C274471E6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CCB1FB0F-C18C-421D-BCF9-840C274471E6}.Debug|Win32.Build.0 = Debug|Win32
+		{CCB1FB0F-C18C-421D-BCF9-840C274471E6}.Release|Win32.ActiveCfg = Release|Win32
+		{CCB1FB0F-C18C-421D-BCF9-840C274471E6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

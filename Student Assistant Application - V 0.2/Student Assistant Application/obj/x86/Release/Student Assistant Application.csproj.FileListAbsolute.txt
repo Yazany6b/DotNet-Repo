@@ -1,0 +1,60 @@
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\bin\Release\Student Assistant Application.exe.manifest
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\bin\Release\Student Assistant Application.application
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\bin\Release\Student Assistant Application.exe
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\bin\Release\Student Assistant Application.pdb
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.AboutForm.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.CoursesForm.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.EstimatorForm.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.GetPasswordForm.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.MainForm.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.MessageViewForm.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.Properties.Resources.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.ReportForm.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.StudentForm.resources
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\GenerateResource.read.1.tlog
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\GenerateResource.write.1.tlog
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student Assistant Application.exe.manifest
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student Assistant Application.application
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student Assistant Application.exe
+E:\Software Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student Assistant Application.pdb
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\bin\Release\Student Assistant Application.exe.manifest
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\bin\Release\Student Assistant Application.application
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\bin\Release\Student Assistant Application.exe
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\bin\Release\Student Assistant Application.pdb
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.AboutForm.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.CoursesForm.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.EstimatorForm.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.GetPasswordForm.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.MainForm.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.MessageViewForm.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.Properties.Resources.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.ReportForm.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.StudentForm.resources
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\GenerateResource.read.1.tlog
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\GenerateResource.write.1.tlog
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student Assistant Application.exe.manifest
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student Assistant Application.application
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student Assistant Application.exe
+E:\Software_Development\Programing\Student Assistant Application\Student Assistant Application\obj\x86\Release\Student Assistant Application.pdb
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\bin\Release\Student Assistant Application.exe.manifest
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\bin\Release\Student Assistant Application.application
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\bin\Release\Student Assistant Application.exe
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\bin\Release\Student Assistant Application.pdb
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.AboutForm.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.CoursesForm.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.EstimatorForm.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.GetPasswordForm.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.MainForm.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.MessageViewForm.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.Properties.Resources.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.ReportForm.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student_Assistant_Application.StudentForm.resources
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\GenerateResource.read.1.tlog
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\GenerateResource.write.1.tlog
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student Assistant Application.exe.manifest
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student Assistant Application.application
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student Assistant Application.exe
+E:\Software_Development\Programing\Student Assistant Application - V 0.2\Student Assistant Application\obj\x86\Release\Student Assistant Application.pdb

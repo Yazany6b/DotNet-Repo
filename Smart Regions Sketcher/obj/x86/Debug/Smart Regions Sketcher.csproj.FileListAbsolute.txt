@@ -1,0 +1,49 @@
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\bin\Debug\Smart Regions Sketcher.exe
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\bin\Debug\Smart Regions Sketcher.pdb
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\bin\Debug\YazanLib.Media.CustomRegions.dll
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.EditForm.resources
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.MoveForm.resources
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.TestRegionForm.resources
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.Form1.resources
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.MainInterface.resources
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.Properties.Resources.resources
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\Smart Regions Sketcher.exe
+D:\Software Developments\My Projects\Super\Smart Regions Sketcher\obj\x86\Debug\Smart Regions Sketcher.pdb
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\bin\Debug\Smart Regions Sketcher.exe
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\bin\Debug\Smart Regions Sketcher.pdb
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\bin\Debug\Development.Utilities.dll
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\bin\Debug\YazanLib.Media.CustomRegions.dll
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\bin\Debug\Development.Utilities.xml
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.EditForm.resources
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.Dialogs.EditFreamsFrom.resources
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.MoveForm.resources
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.Dialogs.ResizeForm.resources
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.TestRegionForm.resources
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.SettingForm.resources
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.MainInterface.resources
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.Properties.Resources.resources
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart Regions Sketcher.exe
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart Regions Sketcher.pdb
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart Regions Sketcher.exe
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart Regions Sketcher.pdb
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\bin\Debug\Smart Regions Sketcher.exe
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\bin\Debug\Smart Regions Sketcher.pdb
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\bin\Debug\Development.Utilities.dll
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\bin\Debug\YazanLib.Media.CustomRegions.dll
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\bin\Debug\Development.Utilities.xml
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.EditForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.Dialogs.EditFreamsFrom.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.MoveForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.Dialogs.ResizeForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.TestRegionForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.SettingForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.MainInterface.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart_Regions_Sketcher.Properties.Resources.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart Regions Sketcher.csproj.GenerateResource.Cache
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher\obj\x86\Debug\Smart Regions Sketcher.csprojResolveAssemblyReference.cache

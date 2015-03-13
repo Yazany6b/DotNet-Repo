@@ -1,0 +1,161 @@
+﻿/////////////////////////////////////////
+
+        private void ProcessQuotationAndComments()
+        {
+            bool skip1 = false;
+            bool skip2 = false;
+            bool found = false;
+            int length = 0;
+            int start = GetFirstCharIndexOfCurrentLine();
+            SelectionStart = start;
+            SelectionLength = Lines[getCurrentLine()].Length;
+            SelectionColor = ForeColor;
+            int end = start + Lines[getCurrentLine()].Length;
+            for (int i = start; i < end; i++)
+            {
+                if (Text[i] == _secondQuotationCharacter && !skip1)
+                {
+                    if (i != 0)
+                    {
+                        if (Text[i - 1] != '\\')
+                        {
+                            if (!skip2)
+                            {
+                                length = 0;
+                                SelectionStart = i;
+                            }
+                            skip2 = !skip2;
+                            found = true;
+                            length++;
+                            continue;
+                        }
+                    }
+                    else
+                    {
+                        if (!skip2)
+                        {
+                            length = 0;
+                            SelectionStart = i;
+                        }
+                        skip2 = !skip2;
+                        found = true;
+                        length++;
+                        continue;
+                    }
+                }
+                if (Text[i] == _firstQuotationCharacter)
+                {
+                    if( i != 0)
+                    {
+                        if(Text[i-1] != '\\')
+                        {
+                            if (!skip1)
+                            {
+                                length = 0;
+                                SelectionStart = i;
+                            }
+                            skip1 = !skip1;
+                            found = true;
+                            length++;
+                            continue;
+                        }
+                    }else
+                    {
+                        if (!skip1)
+                        {
+                            length = 0;
+                            SelectionStart = i;
+                        }
+                        skip1 = !skip1;
+                        found = true;
+                        length++;
+                        continue;
+                    }
+                }
+                if (skip1 || skip2)
+                {
+                    length++;
+                    continue;
+                }
+                if(found)
+                {
+                    start = i;
+                    SelectionLength = length;
+                    SelectionColor = System.Drawing.Color.Red;
+                    found = false;
+                }
+            }
+            end = Find(_normalCommentSymbol, start, start + Lines[getCurrentLine()].Length, System.Windows.Forms.RichTextBoxFinds.MatchCase);
+            if (end != -1)
+            {
+                SelectionStart = end;
+                SelectionLength = (start + Lines[getCurrentLine()].Length) - end;
+                SelectionColor = System.Drawing.Color.Green;
+                SelectionStart = 0;
+                SelectionLength = 0;
+            }
+            else
+            {
+                end = (start + Lines[getCurrentLine()].Length);
+            }
+        }
+
+		///////////////////////////////////////////////////////////////
+
+
+		        private void ColorInText()
+        {
+            if (_keywords.Count == 0)
+                return;
+            paint = false;
+
+            //string text = Lines[getCurrentLine()];
+            int find_at = 0;
+            int currentSelection = SelectionStart;
+            System.Drawing.Color currentColor = SelectionColor;
+            int sel = FirstSpaceBeforeIndex(SelectionStart);
+            if(sel != -1)
+            {
+                SelectionStart = sel;
+                int after = FirstSpaceAfterIndex(currentSelection);
+                if (after != -1)
+                {
+                    SelectionLength = after - SelectionStart + 1;
+                    SelectionColor = this.ForeColor;
+                }
+            }
+            try
+            {
+                for (int i = 0; i < _keywords.Count; i++)
+                {
+                    find_at = GetFirstCharIndexOfCurrentLine();
+                    while (find_at != -1)
+                    {
+                        find_at = Find(_keywords[i], find_at, Lines[getCurrentLine()].Length + GetFirstCharIndexOfCurrentLine(), _rules);
+                        if (find_at != -1)
+                        {
+                            SelectionStart = find_at;
+                            SelectionLength = _keywords[i].Length;
+                            SelectionColor = _keywordsColor;
+                            //SelectionFont = _font;
+                            find_at += _keywords[i].Length - 1;
+                        }
+                    }
+                }
+            }
+            catch
+            {
+            }
+            ProcessQuotationAndComments();
+            SelectionStart = currentSelection;
+            SelectionLength = 0;
+            SelectionColor = currentColor;
+            paint = true;
+        }
+        private int getCurrentLine()
+        {   
+            return this.GetLineFromCharIndex(GetFirstCharIndexOfCurrentLine());
+        }
+
+
+/////////////////////////////////////////////////////////////////////////////////

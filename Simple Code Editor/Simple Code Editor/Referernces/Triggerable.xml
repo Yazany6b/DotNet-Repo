@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Triggerable</name>
+    </assembly>
+    <members>
+        <member name="T:YazanLib.Controls.MessageSentHandler">
+            <summary>
+            Ocurres in each time the WndProc called
+            </summary>
+            <param name="obj">The Sender</param>
+            <param name="m">The sent message</param>
+        </member>
+        <member name="T:YazanLib.Controls.ITriggerable">
+            <summary>
+            Contains the necessary functionality to handle windows message to the implementer control 
+            </summary>
+        </member>
+        <member name="M:YazanLib.Controls.ITriggerable.SendMessage(System.Windows.Forms.Message@)">
+            <summary>
+            Send message to the implementer control
+            </summary>
+            <param name="m">window message</param>
+        </member>
+        <member name="E:YazanLib.Controls.ITriggerable.MessageSent">
+            <summary>
+            Occures when a message sent to the implementer control
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.ITriggerable.KeepInDefault">
+             <summary>
+            Identifies the messages that will trigger the MessageSent Event.
+             </summary>
+        </member>
+        <member name="P:YazanLib.Controls.ITriggerable.DefaultMessage">
+            <summary>
+            Sets Or Gets the default message of the current control
+            </summary>
+        </member>
+    </members>
+</doc>

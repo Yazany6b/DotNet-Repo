@@ -1,0 +1,17 @@
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\bin\Debug\Smart Regions Sketcher V2.exe
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\bin\Debug\Smart Regions Sketcher V2.pdb
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\bin\Debug\Development.Utilities.dll
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\bin\Debug\YazanLib.Media.CustomRegions.dll
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\bin\Debug\Development.Utilities.xml
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.EditForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.Dialogs.EditFreamsFrom.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.Dialogs.MargeOptionsDialog.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.MoveForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.Dialogs.ResizeForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.TestRegionForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.SettingForm.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.MainInterface.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart_Regions_Sketcher.Properties.Resources.resources
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart Regions Sketcher V2.csproj.GenerateResource.Cache
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart Regions Sketcher V2.exe
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\obj\x86\Debug\Smart Regions Sketcher V2.pdb

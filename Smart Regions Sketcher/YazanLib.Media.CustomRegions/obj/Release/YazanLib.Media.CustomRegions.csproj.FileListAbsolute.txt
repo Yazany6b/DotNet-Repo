@@ -1,0 +1,5 @@
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\bin\Release\YazanLib.Media.CustomRegions.dll
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\bin\Release\YazanLib.Media.CustomRegions.pdb
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\obj\Release\ResolveAssemblyReference.cache
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\obj\Release\YazanLib.Media.CustomRegions.dll
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\obj\Release\YazanLib.Media.CustomRegions.pdb

@@ -1,0 +1,793 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Connector</name>
+    </assembly>
+    <members>
+        <member name="T:YazanLib.Controls.Windows_Messages">
+            <summary>
+            Containes all messages ids that the WndProc function could take
+            </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_APP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ACTIVATE">
+            <summary> A message identife that the main is being activated or deactivated</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ACTIVATE_APP">
+            <summary> A message identife that a window is being activated or deactivated</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_AFXFIRST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_AFXLAST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ASK_CB_FORMAT_NAME">
+             <summary>
+            the Clipboard contains a data handle for the CF_OWNERDISPLAY format (that is, when the Clipboard owner will display the Clipboard contents). 
+            so the message will Specifies the maximum number of bytes to copy. Points to the buffer, not exceeding the maximum number of bytes specified. 
+             </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CANCEL_JOURNAL">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CANCEL_MODE">
+            <summary> A message inform the window to cancel any internal mode </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CAPTURE_CHANGED">
+            <summary> A message notify the window that is losing the mouse capture</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CHANGE_CB_CHAIN">
+            <summary> A message notify it that a window is being removed from the Clipboard-Viewer chain</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CHAR">
+            <summary> A message identife that a keystroke and it's translation is a nonsystem character. The character in the wparam value</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CHAR_TO_ITEM">
+            <summary> A message ocurres when a list box send a character to one of his item. The message spacifies that character</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CHILD_ACTIVATE">
+            <summary> A message identife that a child is activated</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CLEAR">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CLOSE">
+            <summary> A signal to an application to terminate</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_COMMAND">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_COMM_NOTIFY">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_COMPACTING">
+            <summary> A message to all top-level windows when Windows detects that more than 12.5 percent of system time over a 
+            30- to 60-second interval is being spent compacting memory.
+            the message Specifies the ratio of CPU time currently spent by Windows compacting memory to CPU time spent performing other operations.
+            For example, 8000h represents 50 percent of CPU time spent compacting memory.
+            </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_COMPARE_ITEM">
+            <summary> A message to specify the relative position of a new item in a child sorted owner-draw combo or list box</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CONTEXT_MENU">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_COPY">
+            <summary> An application sends the message to an edit control or combo box to copy the current selection to the clipboard in CF_TEXT format. </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_COPY_DATA">
+            <summary> An application sends the WM_COPYDATA message to pass data to another application </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CREATE">
+            <summary> A message  sent when an application requests that a window be created by calling the CreateWindowEx or CreateWindow function.
+            (The message is sent before the function returns.) 
+            The window procedure of the new window receives this message after the window is created, but before the window becomes visible.</summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CTL_COLOR_BTN">
+            <summary> A message sent to the parent window of a button before drawing the button. 
+            The parent window can change the button's text and background colors. However,
+            only owner-drawn buttons respond to the parent window processing this message. </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CTL_COLOR_DLG">
+            <summary> A message sent to a dialog box before the system draws the dialog box. By responding to this message,
+            the dialog box can set its text and background colors using the specified display device context handle.
+            </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CTL_COLOR_EDIT">
+            <summary> An edit control that is not read-only or disabled sends the WM_CTLCOLOREDIT message to its parent window when the control is about to be drawn.
+            By responding to this message, the parent window can use the specified device context handle to set the text and background colors of the edit control. </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CTL_COLOR_LIST_BOX">
+            <summary> Sent to the parent window of a list box before the system draws the list box. By responding to this message, the parent window can set the text and 
+            background colors of the list box by using the specified display device context handle.  </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CTL_COLOR_MSG_BOX">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CTL_COLOR_SCROLL_BAR">
+            <summary> The WM_CTLCOLORSCROLLBAR message is sent to the parent window of a scroll bar control when the control is about to be drawn. By responding to this message, the parent window can use \
+            the display context handle to set the background color of the scroll bar control.e </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CTL_COLOR_STATIC">
+            <summary>  static control, or an edit control that is read-only or disabled, sends the WM_CTLCOLORSTATIC message to its parent window when the control is about to be drawn. By responding to this message, the parent window can use the specified 
+            device context handle to set the text and background colors of the static control.  </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CUT">
+            <summary> An application sends a WM_CUT message to an edit control or combo box to delete (cut) 
+            the current selection, if any, in the edit control and copy the deleted text to the clipboard in CF_TEXT format.  </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DEAD_CHAR">
+            <summary> The WM_DEADCHAR message is posted to the window with the keyboard focus when a 
+            WM_KEYUP message is translated by the TranslateMessage function. WM_DEADCHAR specifies a character code generated by a dead key. A dead key is a key that generates a character, such as the umlaut (double-dot), that is combined with another character to form a composite character. For example, the umlaut-O character (Ö) 
+            is generated by typing the dead key for the umlaut character, and then typing the O key. </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DELETE_ITEM">
+            <summary> The WM_DEADCHAR message is posted to the window with the keyboard focus when a WM_KEYUP message is translated by the TranslateMessage function. WM_DEADCHAR specifies a character code generated by a dead key. A dead key is a key that generates a character, such as the umlaut (double-dot), that is combined with another character to form a composite character.
+            For example, the umlaut-O character (Ö) is generated by typing the dead key for the umlaut character, and then typing the O key. </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DESTROY">
+            <summary> The WM_DESTROY message is sent when a window is being destroyed. It is sent to the window procedure of the window being destroyed after the window is removed from the screen.  </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DESTROY_CLIPBOARD">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DEVICE_CHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DEV_MODE_CHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DISPLAY_CHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DRAW_CLIPBOARD">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DRAW_ITEM">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_DROP_FILES">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ENABLE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_END_SESSION">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ENTER_IDLE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ENTER_MENU_LOOP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ENTER_SIZE_MOVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ERASE_BKGND">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_EXIT_MENU_LOOP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_EXIT_SIZE_MOVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_FONT_CHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_GET_DLG_CODE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_GET_FONT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_GET_HOTKEY">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_GET_ICON">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_GET_MIN_MAX_INFO">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_GET_TEXT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_GET_TEXT_LENGTH">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_HANDHEL_DFIRST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_HANDHEL_DLAST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_HELP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_HOTKEY">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_HSCROLL">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_HSCROLL_CLIPBOARD">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_ICON_ERASE_BKGND">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_INIT_DIALOG">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_INIT_MENU">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_INIT_MENU_POPUP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_INPUT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_INPUT_LANGCHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_INPUT_LANG_CHANGE_REQUEST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_KEYDOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_KEYUP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_KILL_FOCUS">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_ACTIVATE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_CASCADE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_CREATE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_DESTROY">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_GET_ACTIVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_ICON_ARRANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_MAXIMIZE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_NEXT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_REFRESH_MENU">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_RESTORE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_SET_MENU">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MDI_TILE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MEASURE_ITEM">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_GET_OBJECT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_CHANGE_UI_STATE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_UPDATE_UIS_TATE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_QUERY_UI_STATE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_UNINITMEN_UPOPUP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MENU_RBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MENU_COMMAND">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MENU_GET_OBJECT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MENU_DRAG">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_APP_COMMAND">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MENU_CHAR">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MENU_SELECT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NEXT_MENU">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOVING">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_ACTIVATE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_CALC_SIZE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_CREATE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_DESTROY">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_HIT_TEST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_LBUTTON_DBLCLK">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_LBUTTON_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_LBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_MBUTTON_DBLCLK">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_MBUTTON_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_MBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_XBUTTON_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_XBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_XBUTTON_DBLCLK">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_MOUSE_HOVER">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_MOUSE_LEAVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_MOUSE_MOVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_PAINT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_RBUTTON_DBLCLK">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_RBUTTON_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NC_RBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NEXT_DLGCTL">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NOTIFY">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NOTIFY_FORMAT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_NULL">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PAINT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PAINT_CLIPBOARD">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PAINT_ICON">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PALETTE_CHANGED">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PALETTE_IS_CHANGING">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PARENT_NOTIFY">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PASTE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PENWIN_FIRST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PENWIN_LAST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_POWER">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_POWER_BROADCAST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PRINT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_PRINT_CLIENT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_QUERY_DRAG_ICON">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_QUERY_END_SESSION">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_QUERY_NEW_PALETTE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_QUERY_OPEN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_QUEUE_SYNC">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_QUIT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_RENDER_ALL_FORMATS">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_RENDER_FORMAT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SET_CURSOR">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SET_FOCUS">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SET_FONT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SET_HOTKEY">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SET_ICON">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SET_REDRAW">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SET_TEXT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SET_TING_CHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SHOW_WINDOW">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SIZE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SIZE_CLIPBOARD">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SIZING">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SPOOLER_STATUS">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_STYLE_CHANGED">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_STYLE_CHANGING">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SYS_CHAR">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SYS_COLOR_CHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SYS_COMMAND">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SYS_DEAD_CHAR">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SYS_KEY_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SYS_KEY_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_TCARD">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_THEME_CHANGED">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_TIME_CHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_TIMER">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_UNDO">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_USER">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_USER_CHANGED">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_VKEY_TO_ITEM">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_VSCROLL">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_VSCROLL_CLIPBOARD">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_WINDOW_POS_CHANGED">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_WINDOW_POS_CHANGING">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_WININI_CHANGE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_KEY_FIRST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_UNI_CHAR">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.UNICODE_NO_CHAR">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_KEY_LAST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_SYNC_PAINT">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOUSE_ACTIVATE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOUSE_MOVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_LBUTTON_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_LBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_LBUTTON_DBLCLK">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_RBUTTON_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_RBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_RBUTTON_DBLCLK">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MBUTTON_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MBUTTON_DBLCLK">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOUSE_WHEEL">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOUSE_FIRST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_XBUTTON_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_XBUTTON_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_XBUTTOND_BLCLK">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOUSELAST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOUSE_LAST">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOUSE_HOVER">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_MOUSE_LEAVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_TOUCH_MOVE">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_TOUCH_DOWN">
+            <summary> A message </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Messages.WM_TOUCH_UP">
+            <summary> A message </summary>
+        </member>
+        <member name="M:YazanLib.Controls.Windows_Messages.CreateMessage(System.IntPtr,System.Int32,System.Object,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="receiverHandle">The handle of the window that will receive the message</param>
+            <param name="messageCode">the message code</param>
+            <param name="lparam">the lparam value</param>
+            <param name="wparam">wparam value</param>
+            <returns>the created message</returns>
+        </member>
+        <member name="M:YazanLib.Controls.Windows_Messages.GetMessageCode(System.Windows.Forms.Message@)">
+            <summary>
+            get the current message code
+            </summary>
+            <param name="m">the message</param>
+            <returns>the message</returns>
+        </member>
+        <member name="M:YazanLib.Controls.Windows_Messages.GetReceiverHandle(System.Windows.Forms.Message@)">
+            <summary>
+            get the handle of the window that will receive the current message
+            </summary>
+            <param name="m">the message</param>
+            <returns>the receiver handle</returns>
+        </member>
+        <member name="M:YazanLib.Controls.Windows_Messages.GetLParam(System.Windows.Forms.Message@)">
+            <summary>
+            get the lparam value
+            </summary>
+            <param name="m">the message</param>
+            <returns>the lparam value</returns>
+        </member>
+        <member name="M:YazanLib.Controls.Windows_Messages.GetWParam(System.Windows.Forms.Message@)">
+            <summary>
+            get the wparam value
+            </summary>
+            <param name="m">the message</param>
+            <returns>the wparam value</returns>
+        </member>
+        <member name="T:YazanLib.Controls.Windows_Keys">
+            <summary>
+            Containes all windows keys that could be sent by windows through WndPro Function
+            </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Keys.VK_LBUTTON">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:YazanLib.Controls.Windows_Keys.VK_RBUTTON">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:YazanLib.Controls.DirectedConnection">
+            <summary>
+            Allows you to exchange messages from a control to another that both implements ITriggerable interface
+            </summary>
+        </member>
+        <member name="M:YazanLib.Controls.DirectedConnection.#ctor(YazanLib.Controls.ITriggerable,YazanLib.Controls.ITriggerable)">
+            <summary>
+            Create an inestace of type DirectedConnection
+            </summary>
+            <param name="source">The source of the message</param>
+            <param name="destination">The destination of the message</param>
+        </member>
+        <member name="P:YazanLib.Controls.DirectedConnection.Keys">
+            <summary>
+            A Key that will be handled by the destination
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.DirectedConnection.KeyLock">
+            <summary>
+            Start Send Keys
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.DirectedConnection.Connected">
+            <summary>
+            Gets or Sets whether to enable or disable the source-destination connection 
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.DirectedConnection.Source">
+            <summary>
+            the messages source ITriggerable reference
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.DirectedConnection.Destination">
+            <summary>
+            the messages destination ITriggerable reference
+            </summary>
+        </member>
+        <member name="T:YazanLib.Controls.UnDirectedConnection">
+            <summary>
+            Allows you to exchange messages between to controls
+            </summary>
+        </member>
+        <member name="M:YazanLib.Controls.UnDirectedConnection.#ctor(YazanLib.Controls.ITriggerable,YazanLib.Controls.ITriggerable)">
+            <summary>
+            Create an inestace of type DirectedConnection
+            </summary>
+            <param name="source">The source of the message</param>
+            <param name="destination">The destination of the message</param>
+        </member>
+        <member name="P:YazanLib.Controls.UnDirectedConnection.SourceDestinationConnected">
+            <summary>
+            Gets or Sets whether to enable or disable the source-destination connection 
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.UnDirectedConnection.DestinationSourceConnected">
+            <summary>
+            Gets or Sets whether to enable or disable the destination-source connection 
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.UnDirectedConnection.Source">
+            <summary>
+            the messages source ITriggerable reference
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.UnDirectedConnection.Destiantion">
+            <summary>
+            the messages destination ITriggerable reference
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.UnDirectedConnection.ConnectionI">
+            <summary>
+            Gets the connection from the destination to the source
+            </summary>
+        </member>
+        <member name="P:YazanLib.Controls.UnDirectedConnection.ConnectionII">
+            <summary>
+            Gets the connection from the source to the destination
+            </summary>
+        </member>
+    </members>
+</doc>

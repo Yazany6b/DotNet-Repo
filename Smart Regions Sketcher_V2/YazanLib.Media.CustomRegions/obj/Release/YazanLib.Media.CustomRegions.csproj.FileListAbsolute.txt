@@ -1,0 +1,10 @@
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\bin\Release\YazanLib.Media.CustomRegions.dll
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\bin\Release\YazanLib.Media.CustomRegions.pdb
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\obj\Release\ResolveAssemblyReference.cache
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\obj\Release\YazanLib.Media.CustomRegions.dll
+D:\Software Developments\My Released Applications\Smart Regions Sketcher\YazanLib.Media.CustomRegions\obj\Release\YazanLib.Media.CustomRegions.pdb
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\YazanLib.Media.CustomRegions\bin\Release\YazanLib.Media.CustomRegions.dll
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\YazanLib.Media.CustomRegions\bin\Release\YazanLib.Media.CustomRegions.pdb
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\YazanLib.Media.CustomRegions\obj\Release\YazanLib.Media.CustomRegions.csprojResolveAssemblyReference.cache
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\YazanLib.Media.CustomRegions\obj\Release\YazanLib.Media.CustomRegions.dll
+E:\Software Engineering\My Released Applications\Smart Regions Sketcher_V2\YazanLib.Media.CustomRegions\obj\Release\YazanLib.Media.CustomRegions.pdb

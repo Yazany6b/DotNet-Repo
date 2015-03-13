@@ -1,0 +1,81 @@
+﻿                    /*else
+                        if (Lines[i].StartsWith("/*") || Lines[i].Contains("/*"))//line start with (/*) or has (/*)
+                        {
+                            if (lines[i].Contains(""))//if has the close 
+                            {
+                                _numberOfCodeWithoutComment--;
+                                Lines[i] = string.Empty;//remove line
+                                _numberOfComments++;
+                            }
+                            else//has /* but not the close
+                            {
+                                int line;
+                                int index = GetCommentCloseIndex(i, out line, lines);//long comments end 
+                                if (line != 0)
+                                {
+                                    if (line > i)
+                                    {
+                                        for (int x = i; x <= line; x++)
+                                        {
+                                            if (i != line)
+                                                Lines[x] = string.Empty;
+                                            else
+                                            {
+                                                if (lines[x].Trim().Contains(""))
+                                                {
+                                                    _numberOfComments++;
+                                                    if (lines[x].Trim().IndexOf("") + 2 < lines[x].Trim().Length)
+                                                    {
+
+                                                        //if (lines[x].Contains("/*"))
+                                                        // {
+                                                        //  Lines[x] = lines[x].Trim();
+                                                        //  while(Lines[x].Contains("/*") && Lines[x].Contains(""))
+                                                        //  {
+                                                        //     if (Lines[x].IndexOf("/*") > 0 && Lines[x].IndexOf("") + 2 < lines[x].Length)
+                                                        //    {
+                                                        //       Lines[x] = Lines[x].Substring(0, Lines[x].IndexOf("/*") - 1) + Lines[x].Substring(0, Lines[x].IndexOf("/*") - 1);
+                                                        //   }
+                                                        //  }
+
+
+                                                        //}
+                                                        try
+                                                        {
+                                                            Lines[x] = lines[x].Trim().Substring(lines[x].Trim().IndexOf(""), lines[x].Trim().Length);
+                                                        }
+                                                        catch { }
+
+                                                    }
+                                                    else
+                                                    {
+                                                        _numberOfCodeWithoutComment--;
+                                                        Lines[x] = string.Empty;
+                                                    }
+                                                }
+                                                i = line + 1;
+
+                                            }
+                                        }
+
+                                    }*/
+                    else
+                                    {
+                                        if (line == i)
+                                        {
+                                            if (index + 2 < lines[i].Length)
+                                            {
+                                                Lines[i] = lines[i].Substring(index + 2, lines.Length - index + 1).Trim();
+                                            }
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    Lines = null;
+                                    System.Windows.Forms.MessageBox.Show("Comment At Line " + i.ToString() + " Not Closed Please Close It \nAnd Reimport The Code", "Error", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Warning);
+                                    return;
+                                }
+                            }
+                        }
+            }

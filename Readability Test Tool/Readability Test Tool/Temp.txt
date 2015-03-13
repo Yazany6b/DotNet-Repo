@@ -1,0 +1,16 @@
+﻿                if (sum < 0.499999 && numberOfZeroValues >= 9)
+                {
+					sum = 1 - (mines sum);
+					mines = 1 - mines;
+					nestedloop = 1 - nestedloop;
+					try
+					{
+						label49.Text = SetPrecision(1.0 - (sum/0.023)) + "%";
+					}
+					catch { }
+					}
+					else
+						label49.Text = SetPrecision(sum) + "%";
+
+                }
+///////////////////////////////////////////////////////////////////////////////////////////////////

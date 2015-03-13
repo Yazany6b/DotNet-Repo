@@ -1,0 +1,776 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Development.Utilities</name>
+    </assembly>
+    <members>
+        <member name="T:Development.Utilities.Statics.Imaging">
+            <summary>
+            Containes needed operation to deal with images and colors
+            </summary>
+            <remarks>this class contains unsafe code to ensure fast performance when applying the various effects</remarks>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.NegativeColor(System.Drawing.Color)">
+            <summary>
+            Gets the negative of a color
+            </summary>
+            <param name="sourceColor">a color to be negative</param>
+            <returns>an new color that's represent the negative value of the source color</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.Negative(System.Drawing.Image)">
+            <summary>
+            Apply the negative effects on an image
+            </summary>
+            <param name="img">the source image to be negative</param>
+            <returns>the result image of the operation</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.Negative(System.Drawing.Image,System.Drawing.Rectangle)">
+            <summary>
+            Apply the negative effects on an image
+            </summary>
+            <param name="img">the source image to be negative</param>
+            <param name="rect">a rectangle from the image to apply the negative effects to it</param>
+            <returns>the result image of the operation</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.ShadeColor(System.Drawing.Color,System.Int32)">
+            <summary>
+            Apply the shade effects to spacific color
+            </summary>
+            <param name="c"> color to be shaded</param>
+            <param name="shadeValue">the shade value to be applied which it should be from 130 - 240 and it must be from 0 - 255</param>
+            <returns>the new shaded color</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.UnShadeColor(System.Drawing.Color)">
+            <summary>
+            Remove the shade effects from spacific color
+            </summary>
+            <param name="c"> color to be unshaded</param>
+            <returns>the new unshaded color</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.GrayscaleColor(System.Drawing.Color)">
+            <summary>
+            Apply the grayscale effect on spacific color
+            </summary>
+            <param name="color">the color to be grayscaled</param>
+            <returns>the new grayscaled color</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.ShadeImage(System.Drawing.Image,System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Apply the shade effects to a rectangle from an image
+            </summary>
+            <param name="img">the source image</param>
+            <param name="rect">a rectangle from the image to a apply the shade effect to it</param>
+            <param name="shadeValue">the shade value to be applied which it should be from 130 - 240 and it must be from 0 - 255</param>
+            <returns>the result image of the operation</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.ShadeImage(System.Drawing.Image,System.Int32)">
+            <summary>
+            Apply the shade effects to an image
+            </summary>
+            <param name="img">the source image</param>
+            <param name="shadeValue">the shade value to be applied which it should be from 130 - 240 and it must be from 0 - 255</param>
+            <returns>the result image of the operation</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.Grayscale(System.Drawing.Image)">
+            <summary>
+            Apply the grayscale effects to an image
+            </summary>
+            <param name="img">the source image</param>
+            <returns>the result image of the operation</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.Grayscale(System.Drawing.Image,System.Drawing.Rectangle)">
+            <summary>
+            Apply the grayscale effects to a rectangle of an image
+            </summary>
+            <param name="img">the source image</param>
+            <param name="rect">a rectangle from the image to a apply the grayscale effect to</param>
+            <returns>the result image of the operation</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.SepiaImage(System.Drawing.Image,System.Int32)">
+            <summary>
+            Apply the sepia effects ot an image
+            </summary>
+            <param name="img">the image to apply sepia effects to it</param>
+            <param name="depth">the depth of the colors in the image recommended between 10 - 60</param>
+            <returns>the result image of the operation</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.SepiaImage(System.Drawing.Image,System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            Apply the sepia effects ot an image
+            </summary>
+            <param name="img">the image to apply sepia effects to it</param>
+            <param name="depth">the depth of the colors in the image recommended between 10 - 60</param>
+            <param name="rect">a rectangle from the image to a apply the sepia effect to it</param>
+            <returns>the result image of the operation</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.Flip(System.Drawing.Image)">
+            <summary>
+            Filp an image by 180 degree
+            </summary>
+            <param name="img">an image to be flipped</param>
+            <returns>the new flipped image</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Imaging.Rotate90Degree(System.Drawing.Image)">
+            <summary>
+            Rotate an image by 90 degree
+            </summary>
+            <param name="img">the new rotated image</param>
+            <returns>rotated image</returns>
+        </member>
+        <member name="T:Development.Utilities.Logging.ConsoleLogStream">
+            <summary>
+            ConsoleLogStream a stream that writes logs to the application console
+            </summary>
+        </member>
+        <member name="T:Development.Utilities.Logging.LogStream">
+            <summary>
+            An interface should be implemeted for developing a new log stream
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Logging.LogStream.Write(System.String,System.Object[])">
+            <summary>
+            log a format message
+            </summary>
+            <param name="msg">the format message</param>
+            <param name="args">the args that the message containes</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.LogStream.Write(System.String)">
+            <summary>
+            log a normal message without any args
+            </summary>
+            <param name="msg">the message to be logged</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.LogStream.WriteLine(System.String,System.Object[])">
+            <summary>
+            log a format message ending the message by the new line character
+            </summary>
+            <param name="msg">the format message</param>
+            <param name="args">the args that the message containes</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.LogStream.WriteLine(System.String)">
+            <summary>
+            log a normal message without any args ending the message by the new line character
+            </summary>
+            <param name="msg">the message to be logged</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.ConsoleLogStream.Write(System.String,System.Object[])">
+            <summary>
+            print a log message from format
+            </summary>
+            <param name="msg">string format</param>
+            <param name="args">the args that the message containes</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.ConsoleLogStream.Write(System.String)">
+            <summary>
+            log a normal message without any args
+            </summary>
+            <param name="msg">the message to be logged</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.ConsoleLogStream.WriteLine(System.String,System.Object[])">
+            <summary>
+            log a format message ending the message by the new line character
+            </summary>
+            <param name="msg">the format message</param>
+            <param name="args">the args that the message containes</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.ConsoleLogStream.WriteLine(System.String)">
+            <summary>
+            log a normal message without any args ending the message by the new line character
+            </summary>
+            <param name="msg">the message to be logged</param>
+        </member>
+        <member name="T:Development.Utilities.Statics.Serializtion">
+            <summary>
+            Serializtion class conatines the serializtion needed operations to serialize or deserialize objects
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Statics.Serializtion.Serialize(System.Object,System.String)">
+            <summary>
+            Serialize an object to a file
+            </summary>
+            <param name="soures">the object to be serialized</param>
+            <param name="fileName">the file to serialize to</param>
+            <remarks>the soures object must be marked with the attribute System.Serializable</remarks>
+        </member>
+        <member name="M:Development.Utilities.Statics.Serializtion.Deserialize(System.String)">
+            <summary>
+            Serialize an object from a file
+            </summary>
+            <param name="fileName">The file to be deserialized</param>
+            <returns>the deserialized object</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Serializtion.Serialize(System.Object,System.IO.Stream)">
+            <summary>
+            Serialize an object to a file
+            </summary>
+            <param name="soures">the object to be serialized</param>
+            <param name="stream">the stream to serialize the object to</param>
+            <remarks>the soures object must be marked with the attribute System.Serializable</remarks>
+        </member>
+        <member name="M:Development.Utilities.Statics.Serializtion.Deserialize(System.IO.Stream)">
+            <summary>
+            Serialize an object from a file
+            </summary>
+            <param name="stream">The stream to be deserialized</param>
+            <returns>the deserialized object</returns>
+        </member>
+        <member name="T:Development.Utilities.Statics.Drawing">
+            <summary>
+            Conatines some operations may needed when dealing with drawing objects
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Statics.Drawing.ClonePointsList(System.Collections.Generic.List{System.Drawing.Point})">
+            <summary>
+            Create another deep copy of points list
+            </summary>
+            <param name="source">the source list of the points</param>
+            <returns>a copy of the source list</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Drawing.ClonePointsArray(System.Drawing.Point[])">
+            <summary>
+            Create another deep copy of points array
+            </summary>
+            <param name="source">the source array of the points</param>
+            <returns>a copy of the source list</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Drawing.GetSystemFonts">
+            <summary>
+            Get all fonts that installed on your current system
+            </summary>
+            <returns>string array containes all fonts familys</returns>
+        </member>
+        <member name="T:Development.Utilities.Statics.Strings">
+            <summary>
+            Containes operations needed when dealing with strings
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Statics.Strings.SubString(System.String,System.Int32,System.Int32)">
+            <summary>
+            Get a string between to indexes
+            </summary>
+            <param name="text">the sub string source</param>
+            <param name="start">the start index</param>
+            <param name="end">the end index</param>
+            <returns>the sub string</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Strings.SubString(System.String,System.Int32)">
+            <summary>
+            Get a string from index to the end of the source text
+            </summary>
+            <param name="text">the sub string source</param>
+            <param name="start">the start index</param>
+            <returns>the sub string</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Strings.SubString(System.Char,System.Char,System.String)">
+            <summary>
+            Get a string between to characters
+            </summary>
+            <param name="text">the sub string source</param>
+            <param name="startChar">the start character</param>
+            <param name="endChar">the end character</param>
+            <returns>the sub string</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Strings.GetBraceOpposite(System.Char)">
+            <summary>
+            gets the opposite of any brace
+            </summary>
+            <param name="brace">the brace to find it's opposite</param>
+            <returns> Character </returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Strings.GetCloseBraceIndex(System.Char,System.Int32,System.String)">
+            <summary>
+            Gets the close brace index in the source text
+            </summary>
+            <param name="brace">the open brace character</param>
+            <param name="openBraceIndex">the brace index in the source text</param>
+            <param name="text">the source text that will be searched</param>
+            <returns>integer that conatines the close brace index of -1 if not exist</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Strings.GetOpenBraceIndex(System.Char,System.Int32,System.String)">
+            <summary>
+            Gets the open brace index in the source text
+            </summary>
+            <param name="brace">the close brace character</param>
+            <param name="closeBraceIndex">the brace index in the source text</param>
+            <param name="text">the source text that will be searched</param>
+            <returns>integer that conatines the open brace index of -1 if not exist</returns>
+        </member>
+        <member name="T:Development.Utilities.Statics.IOs">
+            <summary>
+            IOs class containes the most needed operations for files and directorys
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.WriteToFile``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Print a list of values to a file
+            </summary>
+            <param name="list">List to be saved</param>
+            <param name="fileName">the filename to save the list to it</param>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.WriteToFile``1(System.Collections.Generic.List{``0[]},System.Char,System.String)">
+            <summary>
+            Print a list of arrays to a file
+            </summary>
+            <param name="list">List to be saved</param>
+            <param name="lineValuesSeparator">The charater thats separate values of the array in each line</param>
+            <param name="fileName">a file to save values to</param>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.ReadFromFile(System.Int32,System.Int32,System.Char,System.String)">
+            <summary>
+            Read saved values from file
+            </summary>
+            <param name="count">how many lines to read</param>
+            <param name="offset">the index of the start line to begin reading from</param>
+            <param name="lineValuesSeparator">character thats separate the values in ecah line</param>
+            <param name="fileName">the file path to read the files from</param>
+            <returns>return a list of string arrays that each one stores a line values</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.ReadFromFile(System.Char,System.String)">
+            <summary>
+            Read saved values from file
+            </summary>
+            <param name="lineValuesSeparator">character thats separate the values in ecah line</param>
+            <param name="fileName">the file path to read the files from</param>
+            <returns>return a list of string arrays that each one stores a line values</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.ReadFromFile(System.String)">
+            <summary>
+            Read a file an store it in an array of lines
+            </summary>
+            <param name="fileName">the file path ro read values from</param>
+            <returns>an array of the lines that they were in the file</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.GetDirectoryContent(System.String)">
+            <summary>
+            Gets all directory contents both files and folders
+            </summary>
+            <param name="dicPath">the directory path</param>
+            <returns>string array containes files and folders</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.IsFile(System.String)">
+            <summary>
+            Gets wither the current path is a file path
+            </summary>
+            <param name="path">the path to be checked</param>
+            <returns>true if its a file</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.IsFolder(System.String)">
+            <summary>
+            Gets wither the current path is a folder path
+            </summary>
+            <param name="path">the path to be checked</param>
+            <returns>true if its a folder</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.IsExist(System.String)">
+            <summary>
+            Gets wither the current path is realy exists
+            </summary>
+            <param name="path">the path to be checked</param>
+            <returns>true if its exist</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.GetAllUSBStorgeDevices">
+            <summary>
+            Get all connected usb floppy disks or usb flashs
+            </summary>
+            <returns>String array of all the devices names</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.JoinFiles(System.String[],System.String,System.IO.FileMode)">
+            <summary>
+            Join Files into one file
+            </summary>
+            <param name="files">string array of the files paths</param>
+            <param name="destinationFile">the destiantion file that will containes all the files</param>
+            <param name="destinationWritingMode">the mode of writting on destination</param>
+        </member>
+        <member name="M:Development.Utilities.Statics.IOs.JoinFiles(System.String[],System.String)">
+            <summary>
+            Join Files into one file
+            </summary>
+            <param name="files">string array of the files paths</param>
+            <param name="destinationFile">the destiantion file that will containes all the files</param>
+            <remarks> if destination file is exist it will be overwritten</remarks>
+        </member>
+        <member name="T:Development.Utilities.Statics.Units">
+            <summary>
+            Containes needed when we dealing with units
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.ToSize(System.Int64,Development.Utilities.Statics.Units.Unit)">
+            <summary>
+            Converting from bytes to spacific unit
+            </summary>
+            <param name="bytes">the total count of bytes</param>
+            <param name="unit">the unit to convert to</param>
+            <returns>the new converted value</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.ToString(System.Int64)">
+            <summary>
+            Get the best string represention to thge current bytes;
+            </summary>
+            <param name="bytes">the total count of bytes</param>
+            <returns>string represention of the bytes</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.IsMB(System.Int64)">
+            <summary>
+            Identify weather the current bytes is best measured by Mega Bytes (MB)
+            </summary>
+            <param name="bytes">the total count of bytes</param>
+            <returns>weather is best to measure by MB</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.IsKB(System.Int64)">
+            <summary>
+            Identify weather the current bytes is best measured by Kilo Bytes (KB)
+            </summary>
+            <param name="bytes">the total count of bytes</param>
+            <returns>weather is best to measure by KB</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.IsGB(System.Int64)">
+            <summary>
+            Identify weather the current bytes is best measured by Gega Bytes (GB)
+            </summary>
+            <param name="bytes">the total count of bytes</param>
+            <returns>weather is best to measure by GB</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.TimeFromSeconds(System.Int64)">
+            <summary>
+            Convert the given seconds to the format of h:m:s
+            </summary>
+            <param name="seconds">the total count of seconds to convert</param>
+            <returns>the represention of the seconds</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.ComputeSeconds(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Compute the total seconds in the given time
+            </summary>
+            <param name="hours">the total of hours</param>
+            <param name="minutes">the total of minutes</param>
+            <param name="seconds">the total of seconds</param>
+            <returns>System.Long contains seconds count</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.TimeFromMinutes(System.Int64)">
+            <summary>
+            Convert the given minutes to the format of h:m:00
+            </summary>
+            <param name="minutes">the total count of minutes to convert</param>
+            <returns>the represention of the minutes</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Units.SplitUnit(System.Int64,System.Int32)">
+            <summary>
+            Splite a number of bytes into many splites
+            </summary>
+            <param name="bytes">the total bytes count</param>
+            <param name="splites">the number of wanted splites</param>
+            <returns>return each splite length</returns>
+        </member>
+        <member name="T:Development.Utilities.Statics.Units.Unit">
+            <summary>
+            Represent the different sizes of to measure data 
+            </summary>
+        </member>
+        <member name="F:Development.Utilities.Statics.Units.Unit.KB">
+            <summary>
+            Represents Kilo Byte Unit
+            </summary>
+        </member>
+        <member name="F:Development.Utilities.Statics.Units.Unit.MB">
+            <summary>
+            Represents Mega Byte Unit
+            </summary>
+        </member>
+        <member name="F:Development.Utilities.Statics.Units.Unit.GB">
+            <summary>
+            Represents Giga Byte Unit
+            </summary>
+        </member>
+        <member name="T:Development.Utilities.Statics.XMath">
+            <summary>
+            Conatines so math operation that could be used in development
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Statics.XMath.ToPercentage(System.Int64,System.Int64)">
+            <summary>
+            Converts the relationship between to values as percentage
+            </summary>
+            <param name="total">the max number</param>
+            <param name="current">the small number</param>
+            <returns>the percentage value that represent the max and small number</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.XMath.FindDenominatorByMutualMultiplication(System.Double,System.Double,System.Double)">
+            <summary>
+            Compute the result of mutual multiplication if the second Denominator is unkown
+            </summary>
+            <param name="firstNumerator">the value of the first numerator</param>
+            <param name="firstDenominator">the value of the first denominator</param>
+            <param name="secondNumerator">the value of the second numerator</param>
+            <returns>the result of the multiplication</returns>
+            <example> compute 300/500 = 500/X where X is the second Denominator</example>
+        </member>
+        <member name="M:Development.Utilities.Statics.XMath.FindNumeratorByMutualMultiplication(System.Double,System.Double,System.Double)">
+            <summary>
+            Compute the result of mutual multiplication if the second Numerator is unkown
+            </summary>
+            <param name="firstNumerator">the value of the first numerator</param>
+            <param name="firstDenominator">the value of the first denominator</param>
+            <param name="secondDenominator">the value of the second denominator</param>
+            <returns>the result of the multiplication</returns>
+            <example> compute 300/500 = X/600 where X is the second Numerator</example>
+        </member>
+        <member name="M:Development.Utilities.Statics.XMath.FormatDouble(System.Double,System.Int32)">
+            <summary>
+            Format a double indentifier
+            </summary>
+            <param name="number">the double identifier</param>
+            <param name="presition">number of digits after the dot</param>
+            <returns>System.Double containes the formated value</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.XMath.Median(System.Int32[])">
+            <summary>
+            Computes the median from a set of intergers
+            </summary>
+            <param name="set">the set of integers</param>
+            <returns>the median value</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.XMath.Median(System.Double[])">
+            <summary>
+            Computes the median from a set of floats
+            </summary>
+            <param name="set">the set of integers</param>
+            <returns>the median value</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.XMath.Median(System.Single[])">
+            <summary>
+            Computes the median from a set of floats
+            </summary>
+            <param name="set">the set of floats</param>
+            <returns>the median value</returns>
+        </member>
+        <member name="T:Development.Utilities.Logging.Log">
+            <summary>
+            The log class used to log the developer message to spacific streams
+            </summary>
+        </member>
+        <member name="F:Development.Utilities.Logging.Log.ConsoleLog">
+            <summary>
+            The Console Log Stream that prints on the application console
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Logging.Log.#ctor(Development.Utilities.Logging.LogStream)">
+            <summary>
+            Instantiat a new log stream with the stream to print on it;
+            </summary>
+            <param name="stream">the stream to print messages on</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.Log.Write(System.String,System.Object[])">
+            <summary>
+            print a log message from format
+            </summary>
+            <param name="msg">string format</param>
+            <param name="args">the args that the message containes</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.Log.Write(System.String)">
+            <summary>
+            log a normal message without any args
+            </summary>
+            <param name="msg">the message to be logged</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.Log.WriteLine(System.String,System.Object[])">
+            <summary>
+            print a log message from format ending with new line character
+            </summary>
+            <param name="msg">string format</param>
+            <param name="args">the args that the message containes</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.Log.WriteLine(System.String)">
+            <summary>
+            log a normal message without any args ending with new line character
+            </summary>
+            <param name="msg">the message to be logged</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.Log.DisposableAll">
+            <summary>
+            Dispose all resources thats allocated by some log classes
+            </summary>
+        </member>
+        <member name="P:Development.Utilities.Logging.Log.Stream">
+            <summary>
+            The log stream that all log message will be right to it
+            </summary>
+        </member>
+        <member name="P:Development.Utilities.Logging.Log.EnableLog">
+            <summary>
+            allow log message to be prinetd
+            </summary>
+        </member>
+        <member name="T:Development.Utilities.Logging.FileLogStream">
+            <summary>
+            FileLogStream a stream that writes logs to a spacific file
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Logging.FileLogStream.#ctor(System.String)">
+            <summary>
+            Instantiat a new FileLogStream object with the file path
+            </summary>
+            <param name="filename">a file path to write the logs to</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.FileLogStream.Write(System.String,System.Object[])">
+            <summary>
+            print a log message from format
+            </summary>
+            <param name="msg">string format</param>
+            <param name="args">the args that the message containes</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.FileLogStream.Write(System.String)">
+            <summary>
+            log a normal message without any args
+            </summary>
+            <param name="msg">the message to be logged</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.FileLogStream.WriteLine(System.String,System.Object[])">
+            <summary>
+            log a format message ending the message by the new line character
+            </summary>
+            <param name="msg">the format message</param>
+            <param name="args">the args that the message containes</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.FileLogStream.WriteLine(System.String)">
+            <summary>
+            log a normal message without any args ending the message by the new line character
+            </summary>
+            <param name="msg">the message to be logged</param>
+        </member>
+        <member name="M:Development.Utilities.Logging.FileLogStream.Dispose">
+            <summary>
+            Close The Connection Stream
+            </summary>
+        </member>
+        <member name="T:Development.Utilities.Statics.Collections">
+            <summary>
+            Containes a needed operations when dealing with collections an arrays
+            </summary>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.RemovedDuplicate``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Remove duplicate from a list
+            </summary>
+            <typeparam name="T">The list values data type</typeparam>
+            <param name="list">the list that containes values</param>
+            <returns>a new list without duplication</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.RemovedDuplicate``1(``0[])">
+            <summary>
+            Remove duplicate from a array
+            </summary>
+            <typeparam name="T">The array values data type</typeparam>
+            <param name="list">the array that containes values</param>
+            <returns>a new array without duplication</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.Cut``1(System.Int32,System.Int32,``0[])">
+            <summary>
+            cut a part of array 
+            </summary>
+            <typeparam name="T">The array values data type</typeparam>
+            <param name="start"> start index</param>
+            <param name="end">end index</param>
+            <param name="array">An array of T data type to cut from</param>
+            <returns>the cut array</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.NumberOfRepation``1(System.Collections.Generic.List{``0},``0)">
+            <summary>
+            Gets how many time a value has be repated in a list
+            </summary>
+            <typeparam name="T">The list values data types</typeparam>
+            <param name="list">the list of values</param>
+            <param name="value">the value to be search for</param>
+            <returns>the number of the repations</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.SortAscending``1(``0[])">
+            <summary>
+            Sort an array of values ascending
+            </summary>
+            <typeparam name="T">The values data type</typeparam>
+            <param name="array">the array that containes the values</param>
+            <returns>a new sorted array</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.SortDescending``1(``0[])">
+            <summary>
+            Sort an array of values descending
+            </summary>
+            <typeparam name="T">The values data type</typeparam>
+            <param name="array">the array that containes the values</param>
+            <returns>a new sorted array</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.ToString``1(System.Collections.Generic.List{``0})">
+            <summary>
+            convert a list of objects to a string object 
+            </summary>
+            <typeparam name="T">the type you want to convert from</typeparam>
+            <param name="list">the list of values that you want to convert</param>
+            <remarks>all list values will be separated by \n character in the string object </remarks>
+            <returns>System.String a string object that containes the list</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.ToString``1(``0[])">
+            <summary>
+            convert a list of objects to a string object 
+            </summary>
+            <typeparam name="T">the values Data type </typeparam>
+            <param name="list">the list of values that you want to convert</param>
+            <remarks>all list values will be separated by \n character in the string object </remarks>
+            <returns>System.String a string object that containes the list</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.ToString``1(System.Collections.Generic.List{``0[]},System.String)">
+            <summary>
+            convert a list of arrays to a string object 
+            </summary>
+            <typeparam name="T">the values Data type </typeparam>
+            <param name="list">the list of values that you want to convert</param>
+            <param name="serarator">the string to separate each array from the other in the parent list </param>
+            <remarks>each array values will be separated by \n character in the string object </remarks>
+            <returns>System.String a string object that containes the list</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.ToString``1(System.Collections.Generic.List{System.Collections.Generic.List{``0}},System.String)">
+            <summary>
+            convert a list of lists to a string object 
+            </summary>
+            <typeparam name="T">the values Data type </typeparam>
+            <param name="list">the list of values that you want to convert</param>
+            <param name="serarator">the string to separate each sublist from the other in the parent list </param>
+            <remarks>each sublist values will be separated by \n character in the string object </remarks>
+            <returns>System.String a string object that containes the list</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.ToString``2(System.Collections.Generic.Dictionary{``0,``1},System.String)">
+            <summary>
+            convert a dictionary of objects to a string object 
+            </summary>
+            <typeparam name="K">the Key values data type </typeparam>
+            <typeparam name="V">the Value values data type </typeparam>
+            <param name="dic">the dictionary of keys-values that you want to convert</param>
+            <param name="keyValueSeparator">the string to separate between each key and his value </param>
+            <remarks>each dictionary key-value will be separated by \n character in the string object </remarks>
+            <returns>System.String a string object that containes the list</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.Clone``1(System.Collections.Generic.List{``0})">
+            <summary>
+            Create a deep copy off a list
+            </summary>
+            <typeparam name="T">Any data type Implements System.ICloneable Interface</typeparam>
+            <param name="source">the list to be Cloned</param>
+            <returns>a duplicate copy of the source list</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.Clone``1(``0[])">
+            <summary>
+            Create a deep copy off an array
+            </summary>
+            <typeparam name="T">Any data type Implements System.ICloneable Interface</typeparam>
+            <param name="source">the array to be Cloned</param>
+            <returns>a duplicate copy of the source array</returns>
+        </member>
+        <member name="M:Development.Utilities.Statics.Collections.ToList``1(``0[])">
+            <summary>
+            Create a list from a list of values
+            </summary>
+            <typeparam name="T">the data type of the elements</typeparam>
+            <param name="source">the source of the values</param>
+            <returns>a new list containes the values</returns>
+        </member>
+    </members>
+</doc>
